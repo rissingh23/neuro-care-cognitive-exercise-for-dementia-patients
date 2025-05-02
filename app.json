@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "HelloWorld",
-    "slug": "expo-template-default",
+    "name": "Neuro-Care - Cognitive Exercise for Dementia Patients",
+    "slug": "neuro-care-cognitive-exercise-for-dementia-patients",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -9,14 +9,16 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.rissinghorg.neurocarecognitiveexercisefordementiapatients"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.rissinghorg.neurocarecognitiveexercisefordementiapatients"
     },
     "web": {
       "bundler": "metro",
@@ -37,6 +39,18 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "bf3cbe82-9742-454b-8cb7-09d19df15a30"
+      }
+    },
+    "owner": "rissingh-org",
+    "updates": {
+      "url": "https://u.expo.dev/bf3cbe82-9742-454b-8cb7-09d19df15a30"
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
     }
   }
 }
