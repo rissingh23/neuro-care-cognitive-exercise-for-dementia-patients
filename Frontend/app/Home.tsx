@@ -1,63 +1,134 @@
 // app/index.tsx
 import React from 'react';
-import { View, Text, Pressable, StyleSheet, TouchableOpacity, Touchable } from 'react-native';
+import { 
+  View, 
+  Text, 
+  StyleSheet, 
+  TouchableOpacity, 
+  SafeAreaView,
+  Image,
+  StatusBar 
+} from 'react-native';
 import { useRouter } from 'expo-router';
+import logoImage from '../assets/images/logo-NC.png';
 
 export default function Home() {
   const router = useRouter();
 
   return (
-    <View>
-    <TouchableOpacity
-      style={styles.loginButton}
-      onPress={() => router.push('/')}
-      ><Text style={styles.buttonText}>Login</Text>
-    </TouchableOpacity>
+    <SafeAreaView style={styles.container}>
+      <StatusBar barStyle="dark-content" />
+      
+      <View style={styles.header}>
+        <TouchableOpacity
+          style={styles.loginButton}
+          onPress={() => router.push('/')}
+        >
+          <Text style={styles.loginButtonText}>Login</Text>
+        </TouchableOpacity>
+      </View>
 
+      <View style={styles.logoContainer}>
+        <Image 
+          source={logoImage} 
+          style={styles.logoImage}
+          resizeMode="contain"
+        />
+        <Text style={styles.logoText}>NeuroCARE</Text>
+      </View>
 
-    <View style={styles.buttonContainer}>
-      <Text style={styles.title}>Neuro-Care</Text>
+      <View style={styles.gamesContainer}>
+        <Text style={styles.subtitle}>Choose your exercise</Text>
+        
+        <TouchableOpacity
+          style={styles.gameButton}
+          onPress={() => router.push('/Memory-Exercises')}
+        >
+          <Text style={styles.gameButtonText}>Memory Game</Text>
+          <Text style={styles.gameDescription}>Train your memory with card matching</Text>
+        </TouchableOpacity>
 
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => router.push('/Memory-Exercises')}
-      >
-        <Text style={styles.buttonText}>Play Memory Game</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => router.push('/Math-Exercises')}
-      >
-        <Text style={styles.buttonText}>Play Math Game</Text>
-      </TouchableOpacity>
-    </View>
-    </View>
+        <TouchableOpacity
+          style={styles.gameButton}
+          onPress={() => router.push('/Math-Exercises')}
+        >
+          <Text style={styles.gameButtonText}>Math Exercises</Text>
+          <Text style={styles.gameDescription}>Practice arithmetic skills</Text>
+        </TouchableOpacity>
+      </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  loginButton: {
-    backgroundColor: '#467fd0',
-    padding: 12,
-    borderRadius: 8,
-    marginVertical: 8,
-    alignSelf: 'center',
-    marginTop: 50,
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
   },
-  container: { flex:1, alignItems:'center', justifyContent:'center', padding:20 },
-  title:     { fontSize:28, marginBottom:32 },
-  button:    { backgroundColor:'#467fd0', padding:12, borderRadius:8, marginVertical:8 },
-  buttonText:{ color:'#fff', fontSize:18 },
-    buttonContainer: {
-      flexDirection: 'row',    // align buttons horizontally
-      justifyContent: 'center', // center horizontally
-      alignItems: 'center',     // center vertically
-    },
-    buttonImage: {
-      width: 100,    // set your desired width
-      height: 100,   // set your desired height
-      margin: 10,    // optional spacing between images
-    },
-  
+  header: {
+    paddingHorizontal: 20,
+    paddingTop: 20,
+    alignItems: 'flex-end',
+  },
+  loginButton: {
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: '#1D1755',
+  },
+  loginButtonText: {
+    color: '#1D1755',
+    fontSize: 16,
+    fontWeight: '500',
+  },
+  logoContainer: {
+    alignItems: 'center',
+    marginTop: 20,
+  },
+  logoImage: {
+    width: 120,
+    height: 120,
+  },
+  logoText: {
+    fontSize: 55,
+    fontWeight: 'bold',
+    color: '#1D1755',
+    marginTop: 0,
+  },
+  gamesContainer: {
+    flex: 1,
+    paddingHorizontal: 20,
+    paddingTop: 40,
+  },
+  subtitle: {
+    fontSize: 24,
+    fontWeight: '600',
+    color: '#000',
+    textAlign: 'center',
+    marginBottom: 30,
+  },
+  gameButton: {
+    backgroundColor: '#1D1755',
+    borderRadius: 15,
+    padding: 20,
+    marginBottom: 20,
+    elevation: 3,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+  },
+  gameButtonText: {
+    color: '#fff',
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 8,
+  },
+  gameDescription: {
+    color: '#fff',
+    fontSize: 16,
+    opacity: 0.9,
+  },
 });
+
