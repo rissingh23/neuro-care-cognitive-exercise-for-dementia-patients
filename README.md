@@ -14,12 +14,12 @@
 ## 🎯 Overview
 
 NeuroCare is a cross-platform mobile application designed to help dementia patients maintain and improve their cognitive abilities through engaging, scientifically-backed exercises. Built with Expo (React Native) on the frontend and FastAPI in the backend, NeuroCare delivers a seamless experience on both iOS and Android devices.
-
+[
 <p align="center">
   <!-- Placeholder for a hero screenshot -->
   <img src="./screenshots/hero.png" alt="NeuroCare Hero Screen" width="300" />
 </p>
-
+](https://github.com/rissingh23/vcard-personal-portfolio-master/blob/main/assets/images/neurocare.jpg?raw=true)
 ---
 
 ## 🚀 Features
