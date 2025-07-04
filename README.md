@@ -17,7 +17,7 @@ NeuroCare is a cross-platform mobile application designed to help dementia patie
 [
 <p align="center">
   <!-- Placeholder for a hero screenshot -->
-  <img src=[(https://github.com/rissingh23/vcard-personal-portfolio-master/blob/main/assets/images/neurocare.jpg?raw=true) alt="NeuroCare Hero Screen" width="300" />
+https://github.com/rissingh23/vcard-personal-portfolio-master/blob/main/assets/images/neurocare.jpg?raw=true![image](https://github.com/user-attachments/assets/fd168dcd-f0e3-4f57-a8b2-dd935fcfa415)
 </p>
 ---
 
